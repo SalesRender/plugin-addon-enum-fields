@@ -51,36 +51,28 @@ class CustomerFieldsValidator implements ValidatorInterface
             return $errors;
         }
 
-        $limit = $definition->getLimit();
+        $limit = $definition->limit;
         $count = count($values);
 
-        if ($count < $limit->getMin()) {
+        if (!is_null($limit->min) && $count < $limit->min) {
             $errors[] = Translator::get(
                 'plugin-addon-enum-fields',
                 'You should choose minimum of {option} option(s)',
-                ['option' => $limit->getMin()]
+                ['option' => $limit->min]
             );
         }
 
-        if ($count > $limit->getMin()) {
+        if (!is_null($limit->max) && $count > $limit->max) {
             $errors[] = Translator::get(
                 'plugin-addon-enum-fields',
                 'You should choose less than {option} option(s)',
-                ['option' => $limit->getMax()]
-            );
-        }
-
-        if ($count > $limit->getMin()) {
-            $errors[] = Translator::get(
-                'plugin-addon-enum-fields',
-                'You should choose less than {option} option(s)',
-                ['option' => $limit->getMax()]
+                ['option' => $limit->max]
             );
         }
 
         $fields = array_keys(
             array_merge(
-                array_values(CustomerFieldsFetcherHelper::getTypes($this->types))
+                ...array_values(CustomerFieldsFetcherHelper::getTypes($this->types))
             )
         );
 

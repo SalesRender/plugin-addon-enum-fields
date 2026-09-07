@@ -12,20 +12,20 @@ use XAKEPEHOK\EnumHelper\EnumHelper;
 
 class OrderFieldTypesRegistry extends EnumHelper
 {
-    const ADDRESS = 'AddressOrderField';
-    const BOOLEAN = 'BooleanOrderField';
-    const DATETIME = 'DateTimeOrderField';
-    const EMAIL = 'EmailOrderField';
-    const ENUM = 'EnumOrderField';
-    const FILE = 'FileOrderField';
-    const FLOAT = 'FloatOrderField';
-    const HUMAN_NAME = 'HumanNameOrderField';
-    const IMAGE = 'ImageOrderField';
-    const INTEGER = 'IntegerOrderField';
-    const PHONE = 'PhoneOrderField';
-    const STRING = 'StringOrderField';
-    const URI = 'UriOrderField';
-    const USER = 'UserOrderField';
+    const string ADDRESS = 'AddressOrderField';
+    const string BOOLEAN = 'BooleanOrderField';
+    const string DATETIME = 'DateTimeOrderField';
+    const string EMAIL = 'EmailOrderField';
+    const string ENUM = 'EnumOrderField';
+    const string FILE = 'FileOrderField';
+    const string FLOAT = 'FloatOrderField';
+    const string HUMAN_NAME = 'HumanNameOrderField';
+    const string IMAGE = 'ImageOrderField';
+    const string INTEGER = 'IntegerOrderField';
+    const string PHONE = 'PhoneOrderField';
+    const string STRING = 'StringOrderField';
+    const string URI = 'UriOrderField';
+    const string USER = 'UserOrderField';
 
     public static function values(): array
     {

@@ -23,7 +23,7 @@ class OrderFieldsFetcherHelper extends FieldsFetcherHelper
             $token = GraphqlInputToken::getInstance();
             $client = new ApiClient(
                 "{$token->getBackendUri()}companies/{$token->getPluginReference()->getCompanyId()}/CRM",
-                (string)$token->getOutputToken()
+                $token->getOutputToken()->toString()
             );
 
             $response = $client->query("

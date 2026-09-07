@@ -12,20 +12,20 @@ use XAKEPEHOK\EnumHelper\EnumHelper;
 
 class CustomerFieldTypesRegistry extends EnumHelper
 {
-    const ADDRESS = 'AddressCustomerField';
-    const BOOLEAN = 'BooleanCustomerField';
-    const DATETIME = 'DateTimeCustomerField';
-    const EMAIL = 'EmailCustomerField';
-    const ENUM = 'EnumCustomerField';
-    const FILE = 'FileCustomerField';
-    const FLOAT = 'FloatCustomerField';
-    const HUMAN_NAME = 'HumanNameCustomerField';
-    const IMAGE = 'ImageCustomerField';
-    const INTEGER = 'IntegerCustomerField';
-    const PHONE = 'PhoneCustomerField';
-    const STRING = 'StringCustomerField';
-    const URI = 'UriCustomerField';
-    const USER = 'UserCustomerField';
+    const string ADDRESS = 'AddressCustomerField';
+    const string BOOLEAN = 'BooleanCustomerField';
+    const string DATETIME = 'DateTimeCustomerField';
+    const string EMAIL = 'EmailCustomerField';
+    const string ENUM = 'EnumCustomerField';
+    const string FILE = 'FileCustomerField';
+    const string FLOAT = 'FloatCustomerField';
+    const string HUMAN_NAME = 'HumanNameCustomerField';
+    const string IMAGE = 'ImageCustomerField';
+    const string INTEGER = 'IntegerCustomerField';
+    const string PHONE = 'PhoneCustomerField';
+    const string STRING = 'StringCustomerField';
+    const string URI = 'UriCustomerField';
+    const string USER = 'UserCustomerField';
 
     public static function values(): array
     {
